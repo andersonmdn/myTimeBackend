@@ -6,16 +6,16 @@ module.exports = {
     connection: {
       host: 'localhost',
       user: 'postgres',
-		port: 5432,
-      password: 'postgres',
-      database: 'MyTime'
+      port: 5432,
+      password: 'sql',
+      database: 'mytime',
     },
     migrations: {
-      directory: path.join(__dirname, 'db', 'migrations')
+      directory: path.join(__dirname, 'db', 'migrations'),
     },
     seeds: {
-      directory: path.join(__dirname, 'db', 'seeds')
-    }
+      directory: path.join(__dirname, 'db', 'seeds'),
+    },
   },
   test: {
     client: 'pg',
@@ -23,23 +23,23 @@ module.exports = {
       host: 'localhost',
       user: 'username',
       password: 'password',
-      database: 'database_name_test'
+      database: 'database_name_test',
     },
     migrations: {
-      directory: path.join(__dirname, 'db', 'migrations')
+      directory: path.join(__dirname, 'db', 'migrations'),
     },
     seeds: {
-      directory: path.join(__dirname, 'db', 'seeds')
-    }
+      directory: path.join(__dirname, 'db', 'seeds'),
+    },
   },
   production: {
     client: 'pg',
     connection: process.env.DATABASE_URL,
     migrations: {
-      directory: path.join(__dirname, 'db', 'migrations')
+      directory: path.join(__dirname, 'db', 'migrations'),
     },
     seeds: {
-      directory: path.join(__dirname, 'db', 'seeds')
-    }
-  }
-}
+      directory: path.join(__dirname, 'db', 'seeds'),
+    },
+  },
+};
