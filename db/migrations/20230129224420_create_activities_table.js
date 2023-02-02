@@ -4,13 +4,11 @@
  */
 exports.up = function (knex) {
   return knex.schema.createTable('activities', function (table) {
-    table.increments('id');
-    table.string('description').notNullable();
-    table.integer('activity_number').notNullable();
-    table.integer('activity_item').notNullable();
-    table.integer('activity_description').notNullable();
-    table.integer('my_time').notNullable();
-    table.integer('estimated_time').notNullable();
+    table.increments("activity_id").primary();
+    table.string("description", 255).notNullable();
+    table.integer("activities_type_id").unsigned();
+    table.integer("mytime_id").unsigned();
+    table.integer("active").notNullable();
   });
 };
 

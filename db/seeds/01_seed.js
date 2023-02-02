@@ -4,8 +4,8 @@
  */
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
-  await knex('activities').del();
-  await knex('activities').insert([
+  await knex('activities_old').del();
+  await knex('activities_old').insert([
     {
       description: 'Afastamento Doença',
       activity_number: 0,
