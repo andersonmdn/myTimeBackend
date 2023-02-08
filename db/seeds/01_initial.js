@@ -11,12 +11,9 @@ exports.seed = async function (knex) {
 
   await knex('activies_types').del()
   await knex('activies_types').insert([
-    { activities_type_id: 1, description: "Others - 1", has_number: 0, has_item: 0, has_description: 1, has_estimated_time: 0 },
-    { activities_type_id: 2, description: "Development", has_number: 2, has_item: 2, has_description: 1, has_estimated_time: 1 },
-    { activities_type_id: 3, description: "Analyze", has_number: 2, has_item: 0, has_description: 1, has_estimated_time: 0 },
-    { activities_type_id: 4, description: "Analyze", has_number: 2, has_item: 0, has_description: 1, has_estimated_time: 0 },
-    { activities_type_id: 5, description: "Others - 2", has_number: 0, has_item: 0, has_description: 2, has_estimated_time: 0 },
-    { activities_type_id: 6, description: "Others - 3", has_number: 0, has_item: 0, has_description: 0, has_estimated_time: 0 },
+    { activities_type_id: 1, description: "Development", has_number: 2, has_item: 2, has_description: 1, has_estimated_time: 1 },
+    { activities_type_id: 2, description: "Analyze", has_number: 2, has_item: 0, has_description: 1, has_estimated_time: 0 },
+    { activities_type_id: 3, description: "Out Office", has_number: 2, has_item: 0, has_description: 1, has_estimated_time: 0 },
     /*{ activities_type_id: 1, has_number: 0, has_item: 0, has_description: 0, has_estimated_time: 0 },
     { activities_type_id: 2, has_number: 0, has_item: 0, has_description: 1, has_estimated_time: 0 },
     { activities_type_id: 3, has_number: 0, has_item: 0, has_description: 2, has_estimated_time: 0 },
@@ -38,10 +35,10 @@ exports.seed = async function (knex) {
 
   await knex('activies').del()
   await knex('activies').insert([
-    { activity_id: 1, description: "", activies_type_id: 1, mytime_id: 0, active: true },
-    { activity_id: 2, description: "", activies_type_id: 1, mytime_id: 0, active: true },
-    { activity_id: 3, description: "", activies_type_id: 1, mytime_id: 0, active: true },
-    { activity_id: 4, description: "", activies_type_id: 1, mytime_id: 0, active: true },
+    { activity_id: 1, description: "SAI - Programação", activies_type_id: 1, mytime_id: 0, active: true },
+    { activity_id: 2, description: "SAI - Respondendo duvidas a gerencia de produtos", activies_type_id: 1, mytime_id: 0, active: true },
+    { activity_id: 3, description: "SAI - Respondendo duvidas ao Teste", activies_type_id: 1, mytime_id: 0, active: true },
+    { activity_id: 4, description: "SAI - Merge", activies_type_id: 1, mytime_id: 0, active: true },
     /*{ activities_type_id: 1, has_number: 0, has_item: 0, has_description: 0, has_estimated_time: 0 },
     { activities_type_id: 2, has_number: 0, has_item: 0, has_description: 1, has_estimated_time: 0 },
     { activities_type_id: 3, has_number: 0, has_item: 0, has_description: 2, has_estimated_time: 0 },
